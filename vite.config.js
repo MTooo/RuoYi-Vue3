@@ -34,6 +34,11 @@ export default defineConfig(({ mode, command }) => {
           target: 'http://101.33.209.251:8099',
           changeOrigin: true,
           rewrite: (p) => p.replace(/^\/dev-api/, '')
+        },
+        '/prod-api': {
+          target: 'http://101.33.209.251:8099',
+          changeOrigin: true,
+          rewrite: (p) => p.replace(/^\/prod-api/, '')
         }
       }
     },
